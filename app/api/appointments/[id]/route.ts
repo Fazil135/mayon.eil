@@ -3,11 +3,11 @@ import db from '@/lib/db';
 
 export async function PATCH(
     request: Request,
-    { params }: { params: { id: string } }
+    { params }: { params: Promise<{ id: string }> }
 ) {
     try {
         const { status } = await request.json();
-        const { id } = params;
+        const { id } = await params;
 
         const stmt = db.prepare('UPDATE appointments SET status = ? WHERE id = ?');
         stmt.run(status, id);
