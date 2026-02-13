@@ -20,7 +20,7 @@ export default function EnquiryPage() {
     };
 
     return (
-        <div className="min-h-screen pt-40 pb-24 bg-brand-surface relative overflow-hidden">
+        <div className="min-h-screen pt-32 md:pt-40 pb-16 md:pb-24 bg-brand-surface relative overflow-hidden">
             {/* Decorative background elements */}
             <div className="absolute top-0 left-0 w-full h-[500px] bg-linear-to-b from-white to-transparent pointer-events-none" />
             <div className="absolute top-20 right-0 w-[600px] h-[600px] bg-brand-pink/5 rounded-full blur-[100px] pointer-events-none" />
@@ -30,11 +30,11 @@ export default function EnquiryPage() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="text-center mb-20"
+                    className="text-center mb-12 md:mb-20"
                 >
-                    <span className="inline-block px-5 py-2 mb-6 rounded-full bg-white border border-brand-pink/20 text-brand-pink font-extrabold uppercase tracking-widest text-[0.75rem]">Get in Touch</span>
-                    <h1 className="text-[3.5rem] lg:text-[5rem] font-extrabold text-brand-charcoal leading-[0.9]">
-                        Start Your <br /><span className="accent-serif italic text-brand-gray/80">Journey</span>
+                    <span className="inline-block px-5 py-2 mb-6 rounded-full bg-white border border-brand-pink/20 text-brand-pink font-extrabold uppercase tracking-widest text-[0.7rem] md:text-[0.75rem]">Get in Touch</span>
+                    <h1 className="text-[2.5rem] md:text-[4rem] lg:text-[5rem] font-extrabold text-brand-charcoal leading-[0.9] px-4">
+                        Start Your <br className="hidden sm:block" /><span className="accent-serif italic text-brand-gray/80">Journey</span>
                     </h1>
                 </motion.div>
 
@@ -45,10 +45,10 @@ export default function EnquiryPage() {
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="lg:col-span-7 bg-white rounded-4xl p-10 lg:p-14 shadow-sm border border-brand-charcoal/5"
+                        className="lg:col-span-7 bg-white rounded-3xl md:rounded-4xl p-6 md:p-10 lg:p-14 shadow-sm border border-brand-charcoal/5"
                     >
-                        <h2 className="text-3xl font-serif italic font-bold text-brand-charcoal mb-2">Send a Message</h2>
-                        <p className="text-brand-gray mb-10 text-[0.95rem]">Fill out the form below and our team will get back to you within 24 hours.</p>
+                        <h2 className="text-2xl md:text-3xl font-serif italic font-bold text-brand-charcoal mb-2">Send a Message</h2>
+                        <p className="text-brand-gray mb-8 md:mb-10 text-[0.9rem] md:text-[0.95rem]">Fill out the form below and our team will get back to you within 24 hours.</p>
 
                         <form className="space-y-6" onSubmit={async (e) => {
                             e.preventDefault();
@@ -156,7 +156,7 @@ export default function EnquiryPage() {
                         className="lg:col-span-5 space-y-8"
                     >
                         {/* Callback Request Card */}
-                        <div className="bg-white rounded-4xl p-10 shadow-sm border border-brand-charcoal/5">
+                        <div className="bg-white rounded-3xl md:rounded-4xl p-6 md:p-10 shadow-sm border border-brand-charcoal/5">
                             <h2 className="text-2xl font-serif italic font-bold text-brand-charcoal mb-6">Request Callback</h2>
 
                             <div className="bg-brand-surface rounded-2xl p-6 mb-6 text-center">
@@ -237,7 +237,7 @@ export default function EnquiryPage() {
                         <a
                             href="https://www.instagram.com/mayon.eil/"
                             target="_blank"
-                            className="block bg-white rounded-4xl p-12 text-brand-charcoal relative overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:shadow-brand-pink/20 hover:-translate-y-2 border border-brand-charcoal/5"
+                            className="block bg-white rounded-3xl md:rounded-4xl p-8 md:p-10 lg:p-12 text-brand-charcoal relative overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:shadow-brand-pink/20 hover:-translate-y-2 border border-brand-charcoal/5"
                         >
                             {/* Decorative Backgrounds */}
                             <div className="absolute top-0 right-0 w-[120%] h-[120%] bg-linear-to-br from-brand-pink/5 via-transparent to-brand-mustard/5 blur-3xl opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
@@ -252,8 +252,8 @@ export default function EnquiryPage() {
                                 </div>
 
                                 <div className="space-y-1">
-                                    <h4 className="font-serif text-4xl font-bold text-brand-charcoal tracking-wide">@mayon.eil</h4>
-                                    <p className="text-brand-mustard text-sm font-bold tracking-widest uppercase">Luxury Nail Artistry</p>
+                                    <h4 className="font-serif text-3xl md:text-4xl font-bold text-brand-charcoal tracking-wide">@mayon.eil</h4>
+                                    <p className="text-brand-mustard text-xs md:text-sm font-bold tracking-widest uppercase">Luxury Nail Artistry</p>
                                 </div>
 
                                 <p className="text-brand-gray text-lg leading-relaxed max-w-xs mx-auto italic font-serif">

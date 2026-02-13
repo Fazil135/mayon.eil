@@ -74,7 +74,7 @@ export default function Gallery() {
     return (
         <div className="min-h-screen bg-brand-surface">
             {/* ─── Hero Banner ─── */}
-            <section className="relative pt-[180px] pb-28 overflow-hidden">
+            <section className="relative pt-[140px] md:pt-[180px] pb-16 md:pb-28 overflow-hidden">
                 <div className="absolute inset-0 bg-white" style={{
                     backgroundImage: `
                         radial-gradient(ellipse at 20% 50%, rgba(217,160,145,0.12) 0%, transparent 55%),
@@ -83,7 +83,7 @@ export default function Gallery() {
                     `
                 }} />
 
-                <div className="container mx-auto px-10 relative z-10">
+                <div className="container mx-auto px-6 md:px-10 relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -95,11 +95,11 @@ export default function Gallery() {
                             OUR PORTFOLIO
                         </div>
 
-                        <h1 className="text-[4rem] lg:text-[5.5rem] font-extrabold text-brand-charcoal leading-[0.9] mb-8">
+                        <h1 className="text-[2.5rem] md:text-[4rem] lg:text-[5.5rem] font-extrabold text-brand-charcoal leading-[1.1] md:leading-[0.9] mb-6 md:mb-8">
                             Nail Art <span className="accent-serif">Gallery</span>
                         </h1>
 
-                        <p className="text-[1.15rem] text-brand-gray leading-relaxed max-w-xl mx-auto">
+                        <p className="text-[1rem] md:text-[1.15rem] text-brand-gray leading-relaxed max-w-xl mx-auto px-4 sm:px-0">
                             A curated showcase of our finest nail art designs. Every set is hand-crafted with precision, passion, and premium materials.
                         </p>
                     </motion.div>
@@ -107,8 +107,8 @@ export default function Gallery() {
             </section>
 
             {/* ─── Filter Tabs ─── */}
-            <section className="sticky top-[80px] z-30 bg-white/80 backdrop-blur-xl border-b border-brand-pink/10">
-                <div className="container mx-auto px-10">
+            <section className="sticky top-[96px] md:top-[112px] lg:top-[128px] z-30 bg-white/80 backdrop-blur-xl border-b border-brand-pink/10">
+                <div className="container mx-auto px-6 md:px-10">
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -132,8 +132,8 @@ export default function Gallery() {
             </section>
 
             {/* ─── Masonry Gallery Grid ─── */}
-            <section className="py-16">
-                <div className="container mx-auto px-10">
+            <section className="py-12 md:py-16">
+                <div className="container mx-auto px-6 md:px-10">
                     <motion.div
                         layout
                         className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6"
@@ -195,19 +195,19 @@ export default function Gallery() {
             </section>
 
             {/* ─── Bottom CTA ─── */}
-            <section className="pb-32">
-                <div className="container mx-auto px-10">
+            <section className="pb-20 md:pb-32">
+                <div className="container mx-auto px-6 md:px-10">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="relative overflow-hidden rounded-[40px] bg-brand-charcoal text-white text-center py-24 px-10"
+                        className="relative overflow-hidden rounded-[32px] md:rounded-[40px] bg-brand-charcoal text-white text-center py-16 md:py-24 px-6 md:px-10"
                     >
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand-pink/15 rounded-full blur-[120px] pointer-events-none" />
 
                         <div className="relative z-10">
-                            <h2 className="text-[2.5rem] lg:text-[3.5rem] font-extrabold leading-tight mb-6">
-                                Love what<br />you <span className="accent-serif text-brand-pink">see?</span>
+                            <h2 className="text-[1.8rem] md:text-[2.5rem] lg:text-[3.5rem] font-extrabold leading-tight mb-6">
+                                Love what<br className="hidden sm:block" />you <span className="accent-serif text-brand-pink">see?</span>
                             </h2>
                             <p className="text-white/60 text-[1rem] mb-10 max-w-md mx-auto leading-relaxed">
                                 Book your appointment today and let us create your dream nail art. Every design is fully customisable.

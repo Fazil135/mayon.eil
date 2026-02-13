@@ -67,37 +67,37 @@ const services = [
 
 export default function Services() {
     return (
-        <div className="pt-40 pb-32 bg-brand-surface min-h-screen">
+        <div className="pt-32 md:pt-40 pb-20 md:pb-32 bg-brand-surface min-h-screen">
             <div className="container mx-auto px-6 max-w-7xl">
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="text-center mb-24"
+                    className="text-center mb-16 md:mb-24"
                 >
-                    <span className="inline-block px-5 py-2 mb-6 rounded-full bg-white border border-brand-pink/20 text-brand-pink font-extrabold uppercase tracking-widest text-[0.75rem]">Professional Services</span>
-                    <h1 className="text-[3.5rem] lg:text-[5rem] font-extrabold text-brand-charcoal leading-tight">
+                    <span className="inline-block px-5 py-2 mb-6 rounded-full bg-white border border-brand-pink/20 text-brand-pink font-extrabold uppercase tracking-widest text-[0.7rem] md:text-[0.75rem]">Professional Services</span>
+                    <h1 className="text-[2.5rem] md:text-[4rem] lg:text-[5rem] font-extrabold text-brand-charcoal leading-tight">
                         Curated <span className="accent-serif italic text-brand-gray/80">Treatments</span>
                     </h1>
-                    <p className="mt-6 text-brand-gray max-w-xl mx-auto text-lg leading-relaxed">
+                    <p className="mt-6 text-brand-gray max-w-xl mx-auto text-base md:text-lg leading-relaxed px-4 sm:px-0">
                         Experience bespoke nail architecture and artistry, tailored to your unique style and natural nail health.
                     </p>
                 </motion.div>
 
                 {/* Categories & Cards */}
-                <div className="space-y-20">
+                <div className="space-y-16 md:space-y-20">
                     {services.map((section, idx) => (
                         <div key={idx}>
                             <motion.h3
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                className="text-2xl font-serif italic text-brand-charcoal mb-10 pl-4 border-l-4 border-brand-pink/30"
+                                className="text-xl md:text-2xl font-serif italic text-brand-charcoal mb-8 md:mb-10 pl-4 border-l-4 border-brand-pink/30"
                             >
                                 {section.category}
                             </motion.h3>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                                 {section.items.map((item, i) => {
                                     const Icon = item.icon;
                                     return (
@@ -107,7 +107,7 @@ export default function Services() {
                                             whileInView={{ opacity: 1, y: 0 }}
                                             viewport={{ once: true }}
                                             transition={{ delay: i * 0.1, duration: 0.5 }}
-                                            className="group bg-white rounded-4xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-brand-charcoal/5 hover:border-brand-pink/20 hover:-translate-y-2 cursor-pointer relative overflow-hidden"
+                                            className="group bg-white rounded-3xl md:rounded-4xl p-6 md:p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-brand-charcoal/5 hover:border-brand-pink/20 hover:-translate-y-2 cursor-pointer relative overflow-hidden"
                                         >
                                             <Link href="/book" className="block h-full w-full">
                                                 <div className={`w-14 h-14 rounded-2xl ${item.bg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500`}>

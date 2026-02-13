@@ -6,8 +6,8 @@ import { ArrowRight, Palette, Zap, Star } from 'lucide-react';
 
 export default function Hero() {
     return (
-        <section className="pt-[180px] pb-24 bg-white relative overflow-hidden">
-            <div className="container mx-auto px-10 flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
+        <section className="pt-[140px] md:pt-[160px] lg:pt-[180px] pb-16 md:pb-24 bg-white relative overflow-hidden">
+            <div className="container mx-auto px-6 md:px-10 flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
                 {/* Left Column: Content */}
                 <div className="flex-1 text-center lg:text-left">
                     <motion.div
@@ -24,9 +24,9 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1 }}
-                        className="text-[4.5rem] lg:text-[6rem] mb-8 text-brand-charcoal leading-[0.95] font-extrabold"
+                        className="text-[2.8rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] mb-6 md:mb-8 text-brand-charcoal leading-[1.1] md:leading-[0.95] font-extrabold"
                     >
-                        Artistry <br />
+                        Artistry <br className="hidden sm:block" />
                         <span className="accent-serif">at your fingertips</span>
                     </motion.h1>
 
@@ -79,7 +79,7 @@ export default function Hero() {
                         <img
                             src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1000&auto=format&fit=crop"
                             alt="Premium Nail Art"
-                            className="w-full h-[500px] lg:h-[650px] object-cover rounded-[30px] block"
+                            className="w-full h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px] object-cover rounded-v9 md:rounded-[30px] block"
                         />
 
                         {/* Custom Art Card */}
@@ -87,7 +87,7 @@ export default function Hero() {
                             initial={{ x: -20, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ delay: 0.6, duration: 1 }}
-                            className="absolute top-[15%] -left-10 bg-white p-4 rounded-2xl shadow-lg flex gap-4 items-center z-10 hidden sm:flex"
+                            className="absolute top-[10%] -left-4 md:-left-10 bg-white p-3 md:p-4 rounded-2xl shadow-lg flex gap-3 md:gap-4 items-center z-10 hidden sm:flex"
                         >
                             <div className="w-11 h-11 bg-[#fff1f6] flex items-center justify-center rounded-xl">
                                 <Palette size={20} color="#ff2d85" />
