@@ -107,7 +107,7 @@ export default function Gallery() {
             </section>
 
             {/* ─── Filter Tabs ─── */}
-            <section className="sticky top-[96px] md:top-[112px] lg:top-[128px] z-30 bg-white/80 backdrop-blur-xl border-b border-brand-pink/10">
+            <section className="sticky top-[80px] md:top-[96px] lg:top-[112px] z-30 bg-white/80 backdrop-blur-xl border-b border-brand-pink/10">
                 <div className="container mx-auto px-6 md:px-10">
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
