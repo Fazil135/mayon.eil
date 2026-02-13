@@ -109,9 +109,9 @@ export default function Hero() {
                                 <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-brand-pink/10 flex items-center justify-center">
                                     <Zap size={14} className="text-brand-pink fill-brand-pink" />
                                 </div>
-                                <span className="text-[0.6rem] md:text-[0.7rem] font-extrabold text-brand-pink uppercase tracking-wider">NEW TREND</span>
+                                <span className="text-[0.6rem] md:text-[0.7rem] font-extrabold text-brand-charcoal uppercase tracking-wider">NEW TREND</span>
                             </div>
-                            <strong className="text-[0.85rem] md:text-[1rem] font-extrabold text-brand-pink">Crystal Ombre Extensions</strong>
+                            <strong className="text-[0.85rem] md:text-[1rem] font-extrabold text-brand-charcoal">Crystal Ombre Extensions</strong>
                         </motion.div>
 
                         {/* Decorative Glow */}
