@@ -77,50 +77,66 @@ export default function Header() {
             </div>
 
             {/* Mobile Navigation Menu */}
-            {mobileMenuOpen && (
-                <div className="lg:hidden absolute top-full left-0 w-full bg-white/98 backdrop-blur-md border-b border-[#f1f3f5] shadow-v9">
-                    <nav className="flex flex-col px-6 py-4 gap-4">
-                        <Link
-                            href="/"
-                            onClick={() => setMobileMenuOpen(false)}
-                            className={`no-underline text-[0.9rem] font-bold tracking-widest transition-all duration-300 hover:text-brand-pink py-3 border-b border-brand-pink/20 ${pathname === '/' ? 'text-brand-pink' : 'text-brand-charcoal'}`}
-                        >
-                            HOME
-                        </Link>
-                        <Link
-                            href="/services"
-                            onClick={() => setMobileMenuOpen(false)}
-                            className={`no-underline text-[0.9rem] font-bold tracking-widest transition-all duration-300 hover:text-brand-pink py-3 border-b border-brand-pink/20 ${pathname === '/services' ? 'text-brand-pink' : 'text-brand-charcoal'}`}
-                        >
-                            SERVICES
-                        </Link>
-                        <Link
-                            href="/contact"
-                            onClick={() => setMobileMenuOpen(false)}
-                            className={`no-underline text-[0.9rem] font-bold tracking-widest transition-all duration-300 hover:text-brand-pink py-3 border-b border-brand-pink/20 ${pathname === '/contact' ? 'text-brand-pink' : 'text-brand-charcoal'}`}
-                        >
-                            ENQUIRY
-                        </Link>
-                        <Link
-                            href="/gallery"
-                            onClick={() => setMobileMenuOpen(false)}
-                            className={`no-underline text-[0.9rem] font-bold tracking-widest transition-all duration-300 hover:text-brand-pink py-3 border-b border-brand-pink/20 ${pathname === '/gallery' ? 'text-brand-pink' : 'text-brand-charcoal'}`}
-                        >
-                            GALLERY
-                        </Link>
-                        <a
-                            href="https://www.instagram.com/mayon.eil/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="flex items-center gap-3 text-[0.9rem] font-bold tracking-widest text-[#E4405F] hover:text-[#C13584] transition-colors duration-300 py-3"
-                        >
-                            <Instagram size={24} />
-                            FOLLOW ON INSTAGRAM
-                        </a>
-                    </nav>
-                </div>
-            )}
+            <header-menu-container>
+                {mobileMenuOpen && (
+                    <div className="lg:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-b border-[#f1f3f5] shadow-v9 z-[2000]">
+                        <nav className="flex flex-col px-6 py-4 gap-2">
+                            <Link
+                                href="/"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    setMobileMenuOpen(false);
+                                }}
+                                className={`no-underline text-[0.9rem] font-bold tracking-widest transition-all duration-300 hover:text-brand-pink py-4 border-b border-brand-pink/10 ${pathname === '/' ? 'text-brand-pink' : 'text-brand-charcoal'}`}
+                            >
+                                HOME
+                            </Link>
+                            <Link
+                                href="/services"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    setMobileMenuOpen(false);
+                                }}
+                                className={`no-underline text-[0.9rem] font-bold tracking-widest transition-all duration-300 hover:text-brand-pink py-4 border-b border-brand-pink/10 ${pathname === '/services' ? 'text-brand-pink' : 'text-brand-charcoal'}`}
+                            >
+                                SERVICES
+                            </Link>
+                            <Link
+                                href="/contact"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    setMobileMenuOpen(false);
+                                }}
+                                className={`no-underline text-[0.9rem] font-bold tracking-widest transition-all duration-300 hover:text-brand-pink py-4 border-b border-brand-pink/10 ${pathname === '/contact' ? 'text-brand-pink' : 'text-brand-charcoal'}`}
+                            >
+                                ENQUIRY
+                            </Link>
+                            <Link
+                                href="/gallery"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    setMobileMenuOpen(false);
+                                }}
+                                className={`no-underline text-[0.9rem] font-bold tracking-widest transition-all duration-300 hover:text-brand-pink py-4 border-b border-brand-pink/10 ${pathname === '/gallery' ? 'text-brand-pink' : 'text-brand-charcoal'}`}
+                            >
+                                GALLERY
+                            </Link>
+                            <button
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    window.open("https://www.instagram.com/mayon.eil/", "_blank", "noopener,noreferrer");
+                                    setMobileMenuOpen(false);
+                                }}
+                                className="flex items-center gap-3 text-[0.9rem] font-bold tracking-widest text-[#E4405F] hover:text-[#C13584] transition-colors duration-300 py-4 w-full text-left"
+                            >
+                                <Instagram size={24} />
+                                FOLLOW ON INSTAGRAM
+                            </button>
+                        </nav>
+                    </div>
+                )}
+            </header-menu-container>
         </header>
     );
 }
