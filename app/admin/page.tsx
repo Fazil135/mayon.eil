@@ -40,7 +40,7 @@ export default function AdminDashboard() {
         }
     };
 
-    const updateStatus = async (id: number, status: string) => {
+    const updateStatus = async (id: string, status: string) => {
         try {
             await fetch(`/api/appointments/${id}`, {
                 method: 'PATCH',
@@ -108,8 +108,8 @@ export default function AdminDashboard() {
                                         <td className="p-5 font-medium text-brand-gray">{a.service}</td>
                                         <td className="p-5">
                                             <span className={`px-3 py-1 rounded-full text-[0.75rem] font-bold uppercase ${a.status === 'Completed' ? 'bg-emerald-50 text-emerald-600' :
-                                                    a.status === 'Cancelled' ? 'bg-red-50 text-red-600' :
-                                                        'bg-blue-50 text-blue-600'
+                                                a.status === 'Cancelled' ? 'bg-red-50 text-red-600' :
+                                                    'bg-blue-50 text-blue-600'
                                                 }`}>
                                                 {a.status}
                                             </span>
@@ -117,7 +117,7 @@ export default function AdminDashboard() {
                                         <td className="p-5">
                                             <select
                                                 value={a.status}
-                                                onChange={(e) => updateStatus(a.id, e.target.value)}
+                                                onChange={(e) => updateStatus(String(a.id), e.target.value)}
                                                 className="p-2 border border-[#e5e7eb] rounded-lg text-[0.85rem] font-bold focus:outline-none focus:border-brand-pink"
                                             >
                                                 <option value="Booked">Booked</option>
