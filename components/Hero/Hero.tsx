@@ -14,7 +14,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="flex items-center gap-2 bg-[#fff1f6] text-brand-pink px-4 py-2 rounded-full text-[0.75rem] font-extrabold tracking-wider w-fit mb-8 mx-auto lg:mx-0"
+                        className="flex items-center gap-2 bg-brand-pink/10 text-brand-pink px-4 py-2 rounded-full text-[0.75rem] font-extrabold tracking-wider w-fit mb-8 mx-auto lg:mx-0"
                     >
                         <span className="w-1.5 h-1.5 bg-brand-pink rounded-full"></span>
                         PREMIUM NAIL STUDIO
@@ -45,7 +45,7 @@ export default function Hero() {
                         transition={{ duration: 0.8, delay: 0.3 }}
                         className="flex flex-col sm:flex-row gap-5 mb-16 justify-center lg:justify-start"
                     >
-                        <Link href="/book" className="bg-brand-pink text-white px-8 py-4 rounded-full text-[0.95rem] font-bold no-underline inline-flex items-center gap-2 transition-all duration-300 hover:bg-[#e02473] hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(255,45,133,0.25)]">
+                        <Link href="/book" className="bg-brand-pink text-white px-8 py-4 rounded-full text-[0.95rem] font-bold no-underline inline-flex items-center gap-2 transition-all duration-300 hover:bg-brand-pink/90 hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(212,112,148,0.25)]">
                             Book Appointment <ArrowRight size={18} />
                         </Link>
                         <Link href="/gallery" className="bg-white text-brand-charcoal px-8 py-4 rounded-full text-[0.95rem] font-bold no-underline inline-flex items-center transition-all duration-300 border border-[#e5e7eb] hover:bg-[#f9fafb] hover:border-brand-pink">
@@ -87,14 +87,14 @@ export default function Hero() {
                             initial={{ x: -20, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ delay: 0.6, duration: 1 }}
-                            className="absolute top-[10%] -left-4 md:-left-10 bg-white p-3 md:p-4 rounded-2xl shadow-lg flex gap-3 md:gap-4 items-center z-10 hidden sm:flex"
+                            className="absolute top-[8%] -left-3 md:-left-10 bg-white p-2.5 md:p-4 rounded-2xl shadow-xl flex gap-3 md:gap-4 items-center z-10 sm:flex"
                         >
-                            <div className="w-11 h-11 bg-[#fff1f6] flex items-center justify-center rounded-xl">
-                                <Palette size={20} color="#ff2d85" />
+                            <div className="w-10 h-10 md:w-11 md:h-11 bg-brand-pink/10 flex items-center justify-center rounded-xl">
+                                <Palette size={20} className="text-brand-pink" />
                             </div>
                             <div className="flex flex-col">
-                                <strong className="text-[0.85rem] tracking-wider font-extrabold uppercase">CUSTOM ART</strong>
-                                <span className="text-[0.8rem] text-brand-gray">Bespoke Designs</span>
+                                <strong className="text-[0.75rem] md:text-[0.85rem] tracking-wider font-extrabold uppercase">CUSTOM ART</strong>
+                                <span className="text-[0.7rem] md:text-[0.8rem] text-brand-gray">Bespoke Designs</span>
                             </div>
                         </motion.div>
 
@@ -103,15 +103,15 @@ export default function Hero() {
                             initial={{ x: 20, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ delay: 0.8, duration: 1 }}
-                            className="absolute bottom-[15%] -right-5 bg-white p-5 rounded-2xl shadow-lg flex flex-col items-start gap-2 min-w-[200px] z-10 hidden sm:flex"
+                            className="absolute bottom-[10%] -right-3 md:-right-5 bg-white p-4 md:p-5 rounded-2xl shadow-xl flex flex-col items-start gap-1.5 md:gap-2 min-w-[160px] md:min-w-[200px] z-10 sm:flex"
                         >
-                            <div className="flex items-center gap-2 mb-1">
-                                <div className="w-8 h-8 rounded-full bg-brand-pink/10 flex items-center justify-center">
+                            <div className="flex items-center gap-2 mb-0.5 md:mb-1">
+                                <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-brand-pink/10 flex items-center justify-center">
                                     <Zap size={14} className="text-brand-pink fill-brand-pink" />
                                 </div>
-                                <span className="text-[0.7rem] font-extrabold text-brand-pink uppercase tracking-wider">NEW TREND</span>
+                                <span className="text-[0.6rem] md:text-[0.7rem] font-extrabold text-brand-pink uppercase tracking-wider">NEW TREND</span>
                             </div>
-                            <strong className="text-[1rem] font-extrabold text-brand-charcoal">Crystal Ombre Extensions</strong>
+                            <strong className="text-[0.85rem] md:text-[1rem] font-extrabold text-brand-charcoal">Crystal Ombre Extensions</strong>
                         </motion.div>
 
                         {/* Decorative Glow */}
