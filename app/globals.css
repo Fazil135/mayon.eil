@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-pink: #ff9ec3;
+  /* Sophisticated Rose Gold */
+  --color-brand-mustard: #c48a7b;
+  /* Champagne Gold Accent */
+  --color-brand-cream: #fffaf8;
+  --color-brand-charcoal: #2d2624;
+  --color-brand-gray: #7d6e6a;
+  --color-brand-surface: #fff7f5;
+
+  --radius-v9: 24px;
+  --radius-v10: 20px;
+
+  --font-sans: "DM Sans", "sans-serif";
+  --font-serif: "Playfair Display", "serif";
+
+  --shadow-v9: 0 10px 40px rgba(224, 191, 184, 0.1);
+  --shadow-v10: 0 20px 50px rgba(224, 191, 184, 0.1);
+  --shadow-mustard: 0 10px 25px rgba(192, 160, 144, 0.2);
+  --shadow-pink: 0 4px 14px rgba(224, 191, 184, 0.25);
+}
+
+@utility accent-serif {
+  @apply font-serif italic font-bold;
+}
+
+@utility v-transition {
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  @apply bg-white text-brand-charcoal antialiased;
+}
