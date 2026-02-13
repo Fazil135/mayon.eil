@@ -61,9 +61,9 @@ export default function Header() {
                         GALLERY
                         <span className={`absolute bottom-0 h-0.5 bg-brand-pink transition-all duration-500 group-hover/nav:w-full group-hover/nav:left-0 ${pathname === '/gallery' ? 'w-full left-0' : 'w-0 left-1/2'}`}></span>
                     </Link>
-                    <Link href="https://www.instagram.com/mayon.eil/" target="_blank" className="text-[#E4405F] hover:text-[#C13584] transition-colors duration-300 transform hover:scale-110">
+                    <a href="https://www.instagram.com/mayon.eil/" target="_blank" rel="noopener noreferrer" className="text-[#E4405F] hover:text-[#C13584] transition-colors duration-300 transform hover:scale-110">
                         <Instagram size={24} />
-                    </Link>
+                    </a>
                 </nav>
 
                 {/* Mobile Menu Button - Visible on Mobile Only */}
@@ -108,15 +108,16 @@ export default function Header() {
                         >
                             GALLERY
                         </Link>
-                        <Link
+                        <a
                             href="https://www.instagram.com/mayon.eil/"
                             target="_blank"
+                            rel="noopener noreferrer"
                             onClick={() => setMobileMenuOpen(false)}
                             className="flex items-center gap-3 text-[0.9rem] font-bold tracking-widest text-[#E4405F] hover:text-[#C13584] transition-colors duration-300 py-3"
                         >
                             <Instagram size={24} />
                             FOLLOW ON INSTAGRAM
-                        </Link>
+                        </a>
                     </nav>
                 </div>
             )}

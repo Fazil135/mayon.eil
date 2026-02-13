@@ -79,9 +79,10 @@ export default function Home() {
             {/* Instagram CTA Section */}
             <section className="py-16 md:py-24 bg-[#fffaf9] border-t border-[#f1f3f5]">
                 <div className="container mx-auto px-6 md:px-10 text-center">
-                    <Link
+                    <a
                         href="https://www.instagram.com/mayon.eil/"
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex flex-col items-center group"
                     >
                         <div className="mb-4 md:mb-6 relative">
@@ -94,7 +95,7 @@ export default function Home() {
                         <p className="text-brand-mustard font-bold tracking-[0.2em] text-base md:text-lg uppercase relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-0.5 after:bg-brand-mustard after:transition-all after:duration-500 group-hover:after:w-full">
                             @mayon.eil
                         </p>
-                    </Link>
+                    </a>
                 </div>
             </section>
         </main>
