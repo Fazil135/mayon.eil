@@ -93,7 +93,7 @@ export default function Hero() {
                                 <Palette size={20} className="text-brand-pink" />
                             </div>
                             <div className="flex flex-col">
-                                <strong className="text-[0.75rem] md:text-[0.85rem] tracking-wider font-extrabold uppercase">CUSTOM ART</strong>
+                                <strong className="text-[0.75rem] md:text-[0.85rem] tracking-wider font-extrabold uppercase text-brand-charcoal">CUSTOM ART</strong>
                                 <span className="text-[0.7rem] md:text-[0.8rem] text-brand-gray">Bespoke Designs</span>
                             </div>
                         </motion.div>
@@ -111,7 +111,7 @@ export default function Hero() {
                                 </div>
                                 <span className="text-[0.6rem] md:text-[0.7rem] font-extrabold text-brand-pink uppercase tracking-wider">NEW TREND</span>
                             </div>
-                            <strong className="text-[0.85rem] md:text-[1rem] font-extrabold text-brand-charcoal">Crystal Ombre Extensions</strong>
+                            <strong className="text-[0.85rem] md:text-[1rem] font-extrabold text-brand-pink">Crystal Ombre Extensions</strong>
                         </motion.div>
 
                         {/* Decorative Glow */}
